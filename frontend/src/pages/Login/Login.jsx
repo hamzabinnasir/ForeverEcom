@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import {
     auth,
     googleProvider,
+    facebookProvider,
 } from "./firebaseConfig.js";
 import { signInWithPopup } from "firebase/auth";
 export default function Login() {
@@ -123,6 +124,9 @@ export default function Login() {
                     <div className="socialButtons">
                         <button className="googleBtn" onClick={() => handleSocialLogin(googleProvider)}>
                             Continue with<img src={assets.google_icon} alt="Google" />
+                        </button>
+                        <button className="googleBtn" onClick={() => handleSocialLogin(facebookProvider)}>
+                            Continue with Facebook
                         </button>
                     </div>
 
