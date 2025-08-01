@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBeNOOF2sbe6tTZAkIlwTLNGOUl2JHF-r0",
@@ -17,12 +17,12 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
-// const facebookProvider = new FacebookAuthProvider();
-// facebookProvider.addScope('email');
-// facebookProvider.addScope('public_profile');
+const facebookProvider = new FacebookAuthProvider();
+facebookProvider.addScope('email');
+facebookProvider.addScope('public_profile');
 
 // export const facebookLocalConfig = {
 //   callbackURL: "http://localhost:3000/auth/facebook/callback"
 // };
 
-export { auth, googleProvider, analytics };
+export { auth, googleProvider, analytics, FacebookAuthProvider };
