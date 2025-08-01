@@ -29,11 +29,11 @@ export default function Login({setToken}) {
                     <form onSubmit={handleForm} className="adminLoginForm">
                         <li className="adminLoginLi">
                             <label htmlFor="email">Email Address</label>
-                            <input onChange={(e) => setEmail(e.target.value)} value={email} id="email" type="email" placeholder="your@email.com" />
+                            <input onChange={(e) => setEmail(e.target.value)} value={email} id="email" type="email" value="forever@gmail.com" />
                         </li>
                         <li className="adminLoginLi">
                             <label htmlFor="password">Password</label>
-                            <input onChange={(e) => setPassword(e.target.value)} value={password} id="password" type="password" placeholder="Enter your password" />
+                            <input onChange={(e) => setPassword(e.target.value)} value={password} id="password" type="password" value="forever1234" />
                         </li>
                         <button type="submit" id="login">Login</button>
                     </form>
