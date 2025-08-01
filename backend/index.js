@@ -14,7 +14,12 @@ import createRouter from "./routes/createRoute.js";
 // Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://your-frontend.vercel.app", "https://your-admin.vercel.app"],
+    credentials: true,
+  })
+);
 
 
 connectDB();
