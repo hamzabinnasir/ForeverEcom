@@ -4,8 +4,8 @@ import { toast } from "react-toastify"
 import "./login.css"
 import React, { useState } from "react"
 export default function Login({setToken}) {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+    const [email, setEmail] = useState("forever@gmail.com")
+    const [password, setPassword] = useState("forever1234")
     const handleForm = async (e) => {
         try {
             e.preventDefault();
@@ -29,11 +29,11 @@ export default function Login({setToken}) {
                     <form onSubmit={handleForm} className="adminLoginForm">
                         <li className="adminLoginLi">
                             <label htmlFor="email">Email Address</label>
-                            <input onChange={(e) => setEmail(e.target.value)} value={email} id="email" type="email" value="forever@gmail.com" />
+                            <input onChange={(e) => setEmail(e.target.value)} value={email} id="email" type="email" value={email} />
                         </li>
                         <li className="adminLoginLi">
                             <label htmlFor="password">Password</label>
-                            <input onChange={(e) => setPassword(e.target.value)} value={password} id="password" type="password" value="forever1234" />
+                            <input onChange={(e) => setPassword(e.target.value)} value={password} id="password" type="password" value={password} />
                         </li>
                         <button type="submit" id="login">Login</button>
                     </form>
