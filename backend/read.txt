@@ -1,0 +1,36 @@
+Packages installed
+npm install cors dotenv express jsonwebtoken mongoose multer razorpay stripe validator cloudinary bcrypt.
+
+
+Files and Folder needed
+Folder => config, controllers, middleware, models, routes.
+Files => .env
+
+
+.env => we can store 'Secret keys' and 'Api keys'.
+MONGODB_URI = "mongodb+srv://myselfhamzanasir:hamzamongo123@cluster0.y4j41.mongodb.net/"
+# avoid @ symbol in the password.
+
+
+
+productRouter.post("/add", upload.fields([{name : "image1" , maxCount : 1},{name : "image2" , maxCount : 1},{name : "image3" , maxCount : 1},{name : "image4" , maxCount : 1},]), addProduct) => Note: "is main {name : "image1" , maxCount : 1} => ye ek poori field hai jo k na ek array hai or na hi ek object or jo apnay name se specify hai => (image) or isi trha baki sbhi bhi or har field ka maxCount '1' hai yani k us main sirf ek hi image a skti hai isi liay ham ne is trha se likha hai => req.files.image1[0];
+
+
+
+
+
+______________________ Points to Ponder ________________________
+##
+import dotenv from "dotenv"
+dotenv.config();
+## => this lines must be written at the top level of the server.js
+
+##
+1) Do not use https but use http in order to check multiple requests from thunderClient
+2) const User = mongoose.models.user || mongoose.model("user", userSchema); => in this code use mongoose.models not model only.
+3) *** Biggest Mistake *** => in .env file, if we use "/" at the end of .net i:e;{MONGODB_URI="mongodb+srv://myselfhamzanasir:hamzamongo123@cluster0.y4j41.mongodb.net/"} then we should have to give name of our database without "/" in mongodb.js file in cofig folder i:e; {await mongoose.connect(`${process.env.MONGODB_URI}e-commerse`);}
+4) cloudinary.config({
+        cloud_name: process.env.CLOUDINARY_NAME,
+        api_key: process.env.CLOUDINARY_API_KEY,
+        api_secret: process.env.CLOUDINARY_SECRET_KEY,
+    }); => is main cloud_name hai to clud_name hi likhna hai clodName aisay nahin likhna or relevant info hi deni hai esay nahin k api_key ki jagah ham api_secret use kr rhe hain.

@@ -1,0 +1,41 @@
+/* OurPolicySection */
+.OurPolicySection{
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    justify-content: center;
+    gap: 180px;
+}
+
+/* policyCard */
+.policyCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.policyCard img{
+    width: 45px;
+}
+
+.policyCard h4{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.policyCard p{
+    margin-top: 5px;
+    font-size: 15px;
+    color: #666;
+}
+
+
+/* Responsice Our Policy Section */
+@media screen and (max-width: 480px){
+    .OurPolicySection{
+        flex-direction: column;
+        gap: 50px;
+    }
+}

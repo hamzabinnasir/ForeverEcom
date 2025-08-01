@@ -1,0 +1,32 @@
+/* productItem */
+.imgBox{
+    overflow: hidden;
+    position: relative;
+    height: 270px;
+}
+
+.imgBox img{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0px;
+}
+
+.productItem:hover img{
+    scale: 1.1;
+}
+
+.productItem p {
+    margin-top: 8px;
+    font-size: 14.5px;
+}
+
+.namePara {
+    color: #666;
+}
+
+.ProductPricePara {
+    color: #222;
+}

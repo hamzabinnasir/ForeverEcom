@@ -1,0 +1,178 @@
+/* orderSection */
+.orderSection{
+    padding: 30px 70px;
+}
+
+.orderSection h3{
+    font-size: 15px;
+    font-weight: 400;
+    color: #555;
+}
+
+/* orderContainerParent */
+.orderContainerParent{
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    gap: 15px;
+}
+
+/* orderContainer */
+.orderContainer{
+    display: grid;
+    grid-template-columns: 0.8fr 3fr 1.5fr 2fr 1.14fr;
+    border: 1px solid green;
+    border: 1px solid #dadada;
+    padding: 24px 24px;
+}
+
+/* orderImgBox */
+.orderImgBox img {
+    width: 50px;
+    object-fit: cover;
+}
+
+/* ordersContext */
+.orderContainer p{
+    color: #555;
+    font-size: 14px;
+}
+
+.orderName, .orderMethod{
+    margin: 12px 0px;
+}
+
+.ordernamePara{
+    line-height: 24px;
+}
+
+/* orderSelect */
+.orderSelect{
+    padding: 8px 8px;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+/* Responsive Order Page */
+/* orderSection */
+.orderSection {
+    padding: 20px;
+}
+
+.orderSection h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* orderContainerParent */
+.orderContainerParent {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 18px;
+}
+
+/* orderContainer */
+.orderContainer {
+    display: grid;
+    grid-template-columns: 0.8fr 3fr 1.5fr 2fr 1.14fr;
+    border: 1px solid #dadada;
+    padding: 20px;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .orderContainer {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .orderContainer > div {
+        margin-bottom: 10px;
+    }
+}
+
+/* orderImgBox */
+.orderImgBox img {
+    width: 40px;
+    object-fit: cover;
+}
+
+/* ordersContext */
+.ordersContext p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.ordersContext p span {
+    font-weight: bold;
+}
+
+.orderName, .orderMethod {
+    margin: 12px 0px;
+}
+
+.ordernamePara {
+    line-height: 20px;
+}
+
+@media (max-width: 768px) {
+    .ordersContext p {
+        font-size: 12px;
+    }
+}
+
+.selectDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selectDiv img{
+    width: 12px;
+    margin-left: 32px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+/* orderSelect */
+.orderSelect {
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .orderSection {
+        padding: 10px;
+    }
+
+    .orderSection h3 {
+        font-size: 16px;
+        font-weight: 500;
+        color: #222;
+    }
+
+    .orderContainer {
+        padding: 15px;
+    }
+
+    .orderSelect {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .ordersContext p {
+        font-size: 11px;
+        line-height: 1.2;
+    }
+}

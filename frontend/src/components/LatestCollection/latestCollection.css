@@ -1,0 +1,33 @@
+/* latestCollectionSection */
+.latestCollectionSection{
+    padding-top: 100px;
+}
+
+.latestCollectionSection .title{
+    font-size: 30px;
+    font-weight: 450;
+}
+
+/* latestPara */
+.latestPara{
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* productItemWrapper */
+.productItemWrapper{
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+/* Responsive Latest Collections */
+@media screen and (max-width: 480px) {
+    .productItemWrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,26 @@
+/* titleDiv */
+.titleDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: max-content;
+}
+
+/* title */
+.title{
+    text-align: center;
+    font-weight: 400;
+    font-size: 23px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.titleLight{
+    color: #8d8d8d;
+}
+
+.titleDiv hr{
+    border: 1px solid #414141;
+    width: 40px;
+}

@@ -1,0 +1,47 @@
+/* cartTotalSection */
+.cartTotalSection {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+/* cartTotalParent */
+.cartTotalParent {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+/* cartTotalContainer */
+.cartTotalContainer{
+    width: 500px;
+    margin-top: 15px;
+}
+
+.totalDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0px;
+    border-bottom: 1px solid #dadada;
+}
+
+.totalDiv{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.totalAmountDiv p{
+    font-weight: 700;
+}
+
+
+/* Responsive CartTotal.css */
+@media screen and (max-width: 480px){
+    .cartTotalParent{
+        width: 100%;
+    }
+    .cartTotalContainer{
+        width: 100%;
+    }
+}

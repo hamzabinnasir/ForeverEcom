@@ -1,0 +1,178 @@
+/* orderSection */
+.orderSection{
+    padding: 0px 130px;
+}
+/* orderParent */
+.orderParent{
+    padding-top: 60px;
+    border-top: 1px solid #dadada;
+}
+
+.orderParent .titleDiv{
+    display: flex;
+    justify-content: start;
+}
+
+/* ordersContainer */
+.ordersContainer{
+    margin-top: 20px;
+}
+
+/* order */
+.order{
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0px;
+    position: relative;
+}
+
+/* orderDetails */
+.orderDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.orderName{
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+}
+
+.orderPrice{
+    color: #666;
+    font-size: 17px;
+}
+
+.orderPara{
+    font-size: 15px;
+    color: #555;
+}
+
+.orderDate{
+    font-size: 13px;
+    color: #666;
+}
+
+.orderDate span{
+    color: #999;
+}
+
+/* orderPriceQuantSize */
+.orderPriceQuantSize{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* orderContext */
+.orderContext{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.orderContext img{
+    width: 80px;
+    object-fit: cover;
+}
+
+/* readyToShip */
+.readyToShip{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #666;
+}
+
+.orderCirlce{
+    height: 8px;
+    width: 8px;
+    background-color: rgba(0, 128, 111, 0.565);
+    border-radius: 50%;
+}
+
+/* trackOrder */
+#trackOrder{
+    background-color: #fff;
+    border: 1px solid #dadada;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #444;
+}
+
+
+/* Responsive Order Page */
+@media (max-width: 768px) {
+    .orderSection {
+        padding: 0px 10px;
+    }
+
+    .order {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .orderContext {
+        flex-direction: row; /* Allow image and details to display in a row on medium screens */
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .orderContext img {
+        width: 50px; /* Further reduce image size on medium screens */
+    }
+
+    #trackOrder {
+        align-self: flex-start;
+        font-size: 12px;
+    }
+
+    .orderDetails {
+        gap: 4px;
+    }
+
+    .readyToShip {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .orderContext {
+        flex-direction: column; /* Stack content for smaller screens */
+        text-align: center;
+    }
+
+    .orderContext img {
+        width: 40px; /* Reduce image size for very small screens */
+    }
+
+    .orderName {
+        font-size: 12px;
+    }
+
+    .orderPrice {
+        font-size: 13px;
+    }
+
+    .orderPara,
+    .orderDate,
+    .readyToShip {
+        font-size: 11px;
+    }
+
+    #trackOrder {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+}

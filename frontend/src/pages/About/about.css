@@ -1,0 +1,110 @@
+/* aboutSection */
+.aboutSection{
+    padding: 0px 130px;
+}
+
+/* aboutParent */
+.aboutParent{
+    border-top: 1px solid #dadada;
+    padding-top: 60px;
+}
+
+/* aboutContainer */
+.aboutContainer{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.aboutContainer img{
+    width: 430px;
+}
+
+/* aboutContext */
+.aboutContext p{
+    font-size: 15px;
+    color: #555;
+    padding-right: 190px;
+    line-height: 22px;
+}
+
+.aboutSecP{
+    margin-top: 25px;
+}
+
+.aboutContext h4{
+    margin-top: 22px;
+}
+
+.aboutMissionp{
+    margin-top: 25px;
+}
+
+/* aboutChoseUs */
+.aboutChoseUs{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+/* aboutCardsContainer */
+.aboutCardsContainer{
+    display: flex;
+    margin-top: 20px;
+}
+
+/* aboutCard */
+.aboutCard{
+    height: 300px;
+    border: 1px solid #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 0px 50px;
+    gap: 20px;
+    font-size: 15px;
+}
+
+.aboutCard p{
+    color: #555;
+}
+
+.aboutCard h4{
+    color: #000;
+}
+
+/* Responsive About Section */
+@media screen and (max-width: 480px){
+    .aboutSection{
+        padding: 0px 22px;
+    }
+    .aboutContainer{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .aboutContainer img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .aboutContext{
+        margin-top: 80px;
+    }
+    .aboutContext p{
+        padding-right: 0px;
+    }
+    .aboutCardsContainer{
+        flex-direction: column;
+    }
+
+    .aboutChoseUs{
+        padding-top: 80px;
+    }
+    .aboutCard{
+        padding: 0rem 2.5rem;
+        height: 180px;
+    }
+}

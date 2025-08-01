@@ -1,0 +1,279 @@
+/* adminNavbar */
+#adminNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0px 50px;
+    border-bottom: 1px solid #dadada;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* adminNavLogo */
+#adminNavLogo {
+    width: 140px;
+}
+
+/* navText */
+.navText {
+    font-size: 14px;
+    color: #C586A5;
+    margin-top: -10px;
+    text-transform: uppercase;
+}
+
+/* logoutBtn */
+#logoutBtn {
+    padding: 9px 24px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #4D555E;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* adminNavButtons */
+.adminNavButtons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    #adminNavbar {
+        padding: 10px 22px;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .adminNavButtons {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    #logoutBtn, .jarvisToggleBtn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #adminNavLogo {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .jarvisToggleBtn {
+        font-size: 12px;
+        padding: 10px 16px;
+    }
+
+    #logoutBtn {
+        padding: 8px 18px;
+    }
+
+    #adminNavbar {
+        padding: 10px 14px;
+    }
+
+    .navText {
+        font-size: 12px;
+    }
+}
+
+/* Jarvis Button Effects (same as before) */
+.jarvisToggleBtn {
+    position: relative;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0ff;
+    background: transparent;
+    border: 2px solid #0ff;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    z-index: 1;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px #0ff inset, 0 0 30px #0ff;
+}
+
+.jarvisToggleBtn:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+    transform: scale(1.03);
+}
+
+.jarvisToggleBtn.active {
+    color: #000;
+    background: #0ff;
+    box-shadow: 0 0 25px #0ff, 0 0 60px #0ff;
+    border: none !important;
+}
+
+.jarvisToggleBtn .pulse {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 255, 255, 0.6), transparent);
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: none;
+    pointer-events: none;
+}
+
+.jarvisToggleBtn.active .pulse {
+    animation: verticalSignal 1.2s ease-out infinite;
+}
+
+.jarvisToggleBtn.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: #00f7ff;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    animation: glowDrop 1.2s ease-out infinite;
+}
+
+.jarvisToggleBtn.boom {
+    animation: boomScale 0.3s ease-out;
+}
+
+@keyframes verticalSignal {
+    0% { top: 0%; opacity: 0.8; height: 20%; }
+    50% { top: 40%; opacity: 0.5; height: 30%; }
+    100% { top: 100%; opacity: 0; height: 0%; }
+}
+
+@keyframes glowDrop {
+    0% { top: 0%; opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+@keyframes boomScale {
+    0% { transform: scale(1); box-shadow: 0 0 0px rgba(0, 255, 255, 0.5); }
+    50% { transform: scale(1.3); box-shadow: 0 0 20px rgba(0, 255, 255, 1); }
+    100% { transform: scale(1); box-shadow: 0 0 5px rgba(0, 255, 255, 0.5); }
+}
+
+.jarvisToggleBtn .sparks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 0;
+}
+
+.jarvisToggleBtn .sparks::before,
+.jarvisToggleBtn .sparks::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0ff, transparent);
+    animation: none;
+    opacity: 0;
+}
+
+.jarvisToggleBtn.active .sparks::before {
+    left: 20%;
+    animation: sparkFlash 1.3s infinite;
+    opacity: 0.7;
+}
+
+.jarvisToggleBtn.active .sparks::after {
+    right: 20%;
+    animation: sparkFlash 1.5s infinite;
+    opacity: 0.7;
+}
+
+.jarvisToggleBtn.boom .sparks::before,
+.jarvisToggleBtn.boom .sparks::after {
+    animation: boomSparkFlash 0.3s ease-out;
+    opacity: 1;
+}
+
+@keyframes sparkFlash {
+    0% { height: 0%; opacity: 0; }
+    10% { height: 40%; opacity: 0.7; }
+    50% { height: 80%; opacity: 0.4; }
+    100% { height: 0%; opacity: 0; }
+}
+
+@keyframes boomSparkFlash {
+    0% { height: 0%; opacity: 0; }
+    20% { height: 70%; opacity: 1; }
+    50% { height: 100%; opacity: 0.6; }
+    100% { height: 0%; opacity: 0; }
+}
+
+
+/* New: Toggle Button Icon */
+.menuToggleBtn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #0ff;
+    margin-left: auto;
+}
+
+/* __________________________________________________ */
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    #adminNavbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 22px;
+        gap: 10px;
+    }
+
+    .menuToggleBtn {
+        display: inline;
+    }
+
+    .adminNavButtons {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.4s ease;
+    }
+
+    .adminNavButtons.showMenu {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #logoutBtn,
+    .jarvisToggleBtn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #adminNavLogo {
+        width: 100px;
+    }
+}

@@ -1,0 +1,10 @@
+/* homeWrapper */
+.homeWrapper{
+    padding: 0px 130px;
+}
+
+@media screen and (max-width: 480px) {
+    .homeWrapper{
+        padding: 0px 22px;
+    }
+}

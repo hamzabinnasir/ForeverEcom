@@ -1,0 +1,3 @@
+________________ Points to Ponder ___________________
+const response = await axios.post(backendURL + "/api/product/add", formData, { headers: { token: tokenData } });
+is main token => {headers : {tokenData}} aisay nahin dalna blk => {headers : {token : tokenData}} aisay dalna hai yani k ek variable main dal kr dena hai

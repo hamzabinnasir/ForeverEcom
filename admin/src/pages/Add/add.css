@@ -1,0 +1,169 @@
+/* productAddFrom */
+.productAddFrom {
+    padding: 30px 70px;
+}
+
+.productAddFrom p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* inputField */
+.inputField {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* uploadImgContainer */
+.uploadImgContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.uploadImgContainer label img {
+    width: 80px;
+    object-fit: cover;
+}
+
+/* productNameAndDescContainer */
+.productNameAndDescContainer {
+    width: 500px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.productNameAndDescContainer input {
+    width: 100%;
+    padding: 10px 12px;
+    outline-color: #C586A5;
+    border: 1px solid #dadada;
+    font-size: 14px;
+    border-radius: 3px;
+    color: #555;
+}
+
+.adminDesc {
+    padding: 12px 15px;
+    height: 70px;
+    outline-color: #C586A5;
+    border: 1px solid #dadada;
+    font-size: 14px;
+    border-radius: 3px;
+    color: #555;
+}
+
+/* inputFieldsContainer */
+.inputFieldsContainer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* selectField */
+.selectField {
+    width: 150px;
+}
+
+.selectField p{
+ white-space: nowrap;
+}
+
+.select {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* productSizeContainer */
+.productSizeContainer {
+    margin-top: 8px;
+}
+
+.productBtnContainer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sizeBtn {
+    padding: 8px 15px;
+    background-color: #dcdcdc;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Red Class */
+.red {
+    background-color: #ffebf5;
+}
+
+/* bestSeller */
+.bestSeller {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* adminAddProductBtn */
+#adminAddProductBtn {
+    padding: 12px 40px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+
+/* Responsive Add.css */
+@media screen and (max-width: 480px) {
+    .productAddFrom {
+        padding: 30px 0px;
+        width: 100%;
+        padding-right: 22px;
+    }
+
+    .uploadImgContainer label img{
+        width: 65px;
+    }
+
+    .productNameAndDescContainer{
+        width: 100%;
+    }
+
+    .inputField p {
+        font-size: 18px;
+    }
+
+    .inputField input{
+        width: 100%;
+    }
+
+    .inputFieldsContainer{
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .selectField{
+        width: 100%;
+    }
+
+    .uploadImgContainer{
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}

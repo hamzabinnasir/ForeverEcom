@@ -1,0 +1,139 @@
+/* ====== Page Base ====== */
+.editPage {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+  }
+  
+  .editPage h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #111827;
+  }
+  
+  /* ====== Main Container ====== */
+  .editPageContainer {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    max-width: 1100px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    transition: 0.3s;
+  }
+  
+  /* ====== Left & Right Columns ====== */
+  .aiImgPreview,
+  .editPageContainerContext {
+    flex: 1 1 450px;
+  }
+  
+  /* ====== Image Preview ====== */
+  .aiImgPreview img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  /* ====== Form Fields ====== */
+  .editPageInputField {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .editPageInputField input,
+  .editPageInputField select,
+  .editDescription {
+    font-size: 16px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9fafb;
+    transition: border 0.2s, box-shadow 0.2s;
+  }
+  
+  .editPageInputField input:focus,
+  .editPageInputField select:focus,
+  .editDescription:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+  }
+  
+  .editDescription {
+    resize: vertical;
+    min-height: 278px;
+  }
+  
+  /* ====== Submit Button ====== */
+  #editPageBtn {
+    margin-top: 24px;
+    background-color: #6366f1;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  #editPageBtn:hover {
+    background-color: #4f46e5;
+  }
+  
+  /* ====== Responsive Breakpoints ====== */
+  @media screen and (max-width: 1024px) {
+    .editPageContainer {
+      padding: 30px;
+      flex-direction: column;
+    }
+  
+    .editPage h2 {
+      font-size: 26px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .editPage h2 {
+      font-size: 24px;
+    }
+  
+    .editPageContainer {
+      padding: 25px;
+    }
+  
+    .editPageInputField input,
+    .editPageInputField select,
+    .editDescription {
+      font-size: 15px;
+      padding: 12px 16px;
+    }
+  
+    #editPageBtn {
+      font-size: 15px;
+      padding: 12px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .editPageContainer {
+      padding: 20px;
+    }
+  
+    .editPage h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  
+    .editDescription {
+      min-height: 100px;
+    }
+  }
+  

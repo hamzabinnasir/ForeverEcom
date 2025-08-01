@@ -1,0 +1,146 @@
+/* ollectionSection */
+.collectionSection{
+    padding: 0px 130px;
+}
+
+.collectionParent{
+    border-top: 1px solid #c9c9c9;
+    display: flex;
+    padding: 40px 0px;
+}
+
+.collectionLeft{
+    flex: 2;
+}
+
+.collectionRight{
+    flex: 8;
+}
+
+/* collectionLeft */
+.collectionLeft h3{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+/* formContainer */
+.formContainer{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* filterBox */
+.filterBox{
+    border: 1px solid #c9c9c9;
+    width: 220px;
+    padding: 12px 22px;
+}
+
+.filterBox h4{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* inputField */
+.inputField{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.inputField p{
+    font-size: 14px;
+    color: #666;
+    text-transform: capitalize;
+}
+
+/* collectionRight */
+.sortDivSection{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* selectMenu */
+#selectMenu{
+    padding: 12px 10px;
+    border: 1px solid #c9c9c9;
+    font-size: 14px;
+    font-weight: 450;
+    outline: none;
+}
+
+
+/* allItemWrapper */
+.allItemWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 16px;
+}
+
+.HelloFilter{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.HelloFilter img{
+    width: 10px;
+    margin-top: 8px;
+    display: none;
+}
+
+.displayFilterContainer{
+    display: none;
+}
+
+/* Responsive Collection page */
+@media screen and (max-width: 480px) {
+    .collectionSection{
+        padding: 0px 15px;
+    }
+
+    .collectionParent{
+        flex-direction: column;
+    }
+
+    .filterBox{
+        width: 100%;
+    }
+
+    .collectionRight .title{
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .collectionRight .titleDiv{
+        margin-top: 10px;
+    }
+
+    .collectionRight select{
+        padding: 12px 0px !important;
+    }   
+
+    .allItemWrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sortDivSection{
+        margin-top: 20px;
+    }
+
+    .collectionLeft .cLeftH3{
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    .HelloFilter img{
+        display: block;
+    }
+}

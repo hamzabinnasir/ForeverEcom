@@ -1,0 +1,60 @@
+/* heroSection */
+.heroSection {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #777;
+    display: flex;
+    border-radius: 2px;
+}
+
+.heroLeft,
+.heroRight {
+    flex: 2;
+}
+
+.heroLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #414141;
+}
+
+.heroLeft p {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.heroContext h1{
+    font-weight: 100;
+    font-size: 45px;
+    margin: 8px 0px;
+}
+
+/* heroRight */
+.heroRight img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* paraDiv */
+.paraDiv{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.paraDiv hr{
+    width: 40px;
+    border: 1px solid #414141;
+}
+
+/* Responsive Hero Section */
+@media screen and (max-width: 480px){
+    .heroSection{
+        flex-direction: column;
+        width: 100%;
+    }
+}

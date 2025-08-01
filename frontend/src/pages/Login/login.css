@@ -1,0 +1,140 @@
+/* loginSection */
+.loginSection {
+    height: 400px;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* loginHead */
+.loginHead{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.line{
+    border: 1px solid #000;
+    width: 30px;
+}
+
+/* loginForm */
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 20px;
+    gap: 12px;
+}
+
+.loginForm input{
+    width: 100%;
+    padding: 12px 22px;
+    border: 1px solid #646464;
+    outline: none;
+    font-size: 14px;
+    color: #000;
+}
+
+.loginForm input::placeholder{
+    color: #888;
+}
+
+/* forGodPasswordDiv */
+.forGodPasswordDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #333;
+}
+
+.forGodPasswordDiv p{
+    cursor: pointer;
+}
+
+/* loginBtn */
+#loginBtn {
+    display: block;
+    margin: auto;
+    background-color: #000;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 42px;
+    margin-top: 20px;
+}
+
+/* Responsive Login Page */
+@media screen and (max-width: 480px){
+    .loginForm{
+        padding: 0px 20px;
+    }
+}
+
+/* Continue with facebook and Google login CSS*/
+.orDivider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+  }
+  .orDivider span {
+    background: #fff;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+  }
+  .orDivider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    z-index: 0;
+  }
+  
+  .socialButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  .googleBtn,
+  .facebookBtn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .googleBtn {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .facebookBtn {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+  }
+  
+  .googleBtn img{
+    width: 60px !important;
+    margin-left: -8px;
+  }
+  
