@@ -14,12 +14,7 @@ import createRouter from "./routes/createRoute.js";
 // Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(
-  cors({
-    origin: ["https://forever-ecom-frontend-xi.vercel.app", "https://forever-ecom-kappa.vercel.app"],
-    credentials: true,
-  })
-);
+app.use(cors({ origin: "*" }));
 
 
 connectDB();
