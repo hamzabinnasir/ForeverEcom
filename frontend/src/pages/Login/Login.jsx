@@ -125,7 +125,7 @@ export default function Login() {
                         <button className="googleBtn" onClick={() => handleSocialLogin(googleProvider)}>
                             Continue with<img src={assets.google_icon} alt="Google" />
                         </button>
-                        <button className="googleBtn" onClick={() => handleSocialLogin(facebookProvider)}>
+                        <button style={{display: "none"}} className="googleBtn" onClick={() => handleSocialLogin(facebookProvider)}>
                             Continue with Facebook
                         </button>
                     </div>
