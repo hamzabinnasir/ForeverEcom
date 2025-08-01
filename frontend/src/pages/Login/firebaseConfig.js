@@ -25,4 +25,4 @@ facebookProvider.addScope('public_profile');
 //   callbackURL: "http://localhost:3000/auth/facebook/callback"
 // };
 
-export { auth, googleProvider, analytics, FacebookAuthProvider };
+export { auth, googleProvider, analytics, facebookProvider };
