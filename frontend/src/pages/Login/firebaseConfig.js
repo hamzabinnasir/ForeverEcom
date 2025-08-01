@@ -21,8 +21,8 @@ const facebookProvider = new FacebookAuthProvider();
 facebookProvider.addScope('email');
 facebookProvider.addScope('public_profile');
 
-// export const facebookLocalConfig = {
-//   callbackURL: "http://localhost:3000/auth/facebook/callback"
-// };
+facebookProvider.setCustomParameters({
+  'display': 'popup'
+});
 
 export { auth, googleProvider, analytics, facebookProvider };
