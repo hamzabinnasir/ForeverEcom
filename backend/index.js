@@ -17,7 +17,7 @@ app.use(express.json());
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:3000",
-  "https://forever-ecom-frontend-six.vercel.app",
+  "https://forever-ecom-frontend-nine.vercel.app",
   "https://forever-ecom-admin-six.vercel.app"
 ];
 
