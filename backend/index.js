@@ -15,20 +15,26 @@ import createRouter from "./routes/createRoute.js";
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 const allowedOrigins = [
-  "https://forever-ecom-frontend-six.vercel.app",
-  "https://forever-ecom-admin-alpha.vercel.app" 
-];
-
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true
-}));
+    "http://localhost:5173", 
+    "http://localhost:3000", 
+    "https://forever-ecom-frontend-six.vercel.app",
+    "https://forever-ecom-admin-six.vercel.app"
+  ];
+  
+  const corsOptions = {
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("CORS not allowed from this origin"));
+      }
+    },
+    credentials: true,
+    methods: "GET,POST,PUT,DELETE,OPTIONS",
+    allowedHeaders: "Origin,X-Requested-With,Content-Type,Accept,Authorization"
+  };
+  
+  app.use(cors(corsOptions));
 
 
 connectDB();
