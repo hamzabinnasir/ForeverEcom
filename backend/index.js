@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://your-frontend.vercel.app", "https://your-admin.vercel.app"],
+    origin: ["https://forever-ecom-frontend-xi.vercel.app", "https://forever-ecom-kappa.vercel.app"],
     credentials: true,
   })
 );
