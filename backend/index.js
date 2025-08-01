@@ -14,21 +14,7 @@ import createRouter from "./routes/createRoute.js";
 // Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-const allowedOrigins = [
-  "https://forever-ecom-frontend-six.vercel.app",
-  "http://localhost:3000",
-];
-
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true
-}));
+app.use(cors());
 
 
 connectDB();
