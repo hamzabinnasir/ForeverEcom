@@ -75,6 +75,7 @@ export default function Users() {
                             </div>
                             <div className="table-cell actions" data-label="Actions">
                                 <button
+                                    disabled
                                     onClick={() => handleDeleteUser(user?._id)}
                                     className="delete-btn"
                                     aria-label="Delete user"
@@ -88,4 +89,5 @@ export default function Users() {
             </div>
         </div>
     )
+
 }
