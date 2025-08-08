@@ -70,7 +70,7 @@ export default function List({ token }) {
                                     <p>{currency}{item.price}</p>
                                 </div>
                                 <div className="action">
-                                    <button onClick={()=>removeProduct(item._id)} id="deleteProductBtn">
+                                    <button disabled onClick={()=>removeProduct(item._id)} id="deleteProductBtn">
                                         <img src={assets.cross_icon} alt="no img" />
                                     </button>
                                 </div>
@@ -81,4 +81,5 @@ export default function List({ token }) {
             </div>
         </>
     )
+
 }
