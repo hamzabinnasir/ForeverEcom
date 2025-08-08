@@ -110,7 +110,7 @@ export default function List() {
 
                             <div className="ImageActionBox">
                                 <div className="imgListActionBtns">
-                                    <button id="deleteDesignBtn" onClick={() => handleDeleteDesign(img?._id)}>Delete Design</button>
+                                    <button disabled id="deleteDesignBtn" onClick={() => handleDeleteDesign(img?._id)}>Delete Design</button>
                                     <button id="viewDesignBtn">
                                         <Link className="link" to={`/view/${img?._id}`}>View</Link>
                                     </button>
@@ -123,3 +123,4 @@ export default function List() {
             </div>
     );
 }
+
