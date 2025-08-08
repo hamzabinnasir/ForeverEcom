@@ -45,6 +45,7 @@ export default function Orders({ token }) {
 
 
     const handleDeleteOrder = async (orderId) => {
+        return toast.error("You cannot delete this order for now");
         try {
             let response = await axios.post(`${backendURL}/api/orders/delete`, { orderId });
             if (response.data.success) {
@@ -111,4 +112,5 @@ export default function Orders({ token }) {
             </div>
         </>
     )
+
 }
