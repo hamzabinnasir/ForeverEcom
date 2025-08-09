@@ -1,6 +1,6 @@
 import "./hero.css"
 import React from "react"
-// import heroImg from "../../assets/hero_img.png"
+import heroImg from "../../assets/hero_img.png"
 export default function Hero() {
     return (
         <>
@@ -19,12 +19,13 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="heroRight">
-                    <img src="https://web.whatsapp.com/6d863d28-edba-4f11-8522-cc3cd68800b0" alt="no img" />
+                    <img src={heroImg} alt="no img" />
                 </div>
             </div>
         </>
     )
 
 }
+
 
 
