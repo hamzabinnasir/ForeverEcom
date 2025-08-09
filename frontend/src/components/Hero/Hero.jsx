@@ -18,6 +18,23 @@ export default function Hero() {
                             <hr />
                         </div>
                     </div>
+                    <div className="circle">
+                        <div className="lateArCircle">
+                            <span>L</span>
+                            <span>A</span>
+                            <span>T</span>
+                            <span>E</span>
+                            <span>S</span>
+                            <span>T</span>
+                            <span>A</span>
+                            <span>R</span>
+                            <span>I</span>
+                            <span>V</span>
+                            <span>A</span>
+                            <span>L</span>
+                            <span>S</span>
+                        </div>
+                    </div>
                 </div>
                 <div className="heroRight">
                     <img src={heroImg5} alt="no img" />
@@ -25,12 +42,4 @@ export default function Hero() {
             </div>
         </>
     )
-
 }
-
-
-
-
-
-
-
