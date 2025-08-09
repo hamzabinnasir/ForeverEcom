@@ -18,7 +18,7 @@ export default function Hero() {
                             <hr />
                         </div>
                     </div>
-                    <div className="circle">
+                    <div className="circleH">
                         <div className="lateArCircle">
                             <span>L</span>
                             <span>A</span>
@@ -43,3 +43,4 @@ export default function Hero() {
         </>
     )
 }
+
