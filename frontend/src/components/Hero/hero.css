@@ -65,7 +65,7 @@
     position: relative;
 }
 
-.circle {
+.circleH {
     height: 100px !important;
     width: 100px !important;
     border-radius: 50%;
@@ -181,6 +181,7 @@
         display: none;
     }
 }
+
 
 
 
