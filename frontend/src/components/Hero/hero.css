@@ -178,9 +178,8 @@
 
 @media (max-width: 480px) {
     .circle {
-        transform: scale(0.5) !important;
-        top: -15px !important;
-        left: -15px !important;
+        display: "none";
     }
 }
+
 
