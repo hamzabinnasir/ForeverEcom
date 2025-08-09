@@ -18,7 +18,7 @@ export default function Navbar() {
         <>
             <nav id="navbar">
                 <Link className={"link"} to={"/"}>
-                    <img id="logo" src={assets.logo} alt="no img" />
+                    <img id="logo" src={assets.ecomLogo} alt="no img" />
                 </Link>
                 <ul className="navListContainer">
                     <NavLink className={"link"} to={"/"}>
@@ -121,4 +121,5 @@ export default function Navbar() {
         </>
     )
 }
+
 
