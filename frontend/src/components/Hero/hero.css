@@ -5,6 +5,8 @@
     border: 1px solid #777;
     display: flex;
     border-radius: 2px;
+    position: relative;
+    z-index: 100;
 }
 
 .heroLeft,
@@ -181,6 +183,7 @@
         display: none;
     }
 }
+
 
 
 
