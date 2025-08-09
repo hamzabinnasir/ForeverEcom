@@ -24,7 +24,7 @@ export default function Navbar({ setToken }) {
     return (
         <nav id="adminNavbar">
             <div className="adminNavContext">
-                <img id="adminNavLogo" src={assets.logo} alt="no img" />
+                <img id="adminNavLogo" src={assets.ecomLogo} alt="no img" />
                 <p className="navText">admin panel</p>
                 <button className="menuToggleBtn" onClick={toggleMobileMenu}>
                     {showMobileMenu ? <FaAngleUp /> : <FaAngleDown />}
@@ -45,3 +45,4 @@ export default function Navbar({ setToken }) {
         </nav>
     );
 }
+
