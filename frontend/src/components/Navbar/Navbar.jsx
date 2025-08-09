@@ -63,7 +63,7 @@ export default function Navbar() {
                 {/* Responsive Navbar */}
                 <nav id="navbarRes">
                     <Link className={"link"} to={"/"}>
-                        <img id="logo" src={assets.logo} alt="no img" />
+                        <img id="logo" src={assets.ecomLogo} alt="no img" />
                     </Link>
 
                     <div className="navIcons">
@@ -121,5 +121,6 @@ export default function Navbar() {
         </>
     )
 }
+
 
 
