@@ -77,10 +77,20 @@ import easyPaisa from "./easyPesa.png"
 import jazzCash from "./jazzCash.png"
 import payoneer from "./payoneer.png"
 import google_icon from "./google.png"
+import heroImg2 from "./heroImg2.jpg"
+import heroImg3 from "./heroImg3.jpg"
+import heroImg4 from "./heroImg4.jpg"
+import heroImg5 from "./heroImg5.jpg"
+import heroImg6 from "./heroImg6.jpg"
 
 export const assets = {
     logo,
     hero_img,
+    heroImg2,
+    heroImg3,
+    heroImg4,
+    heroImg5,
+    heroImg6,
     cart_icon,
     dropdown_icon,
     exchange_icon,
@@ -727,4 +737,5 @@ export const products = [
         date: 1716668445448,
         bestseller: false
     },
+
 ]
