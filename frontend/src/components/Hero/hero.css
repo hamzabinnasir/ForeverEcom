@@ -77,7 +77,7 @@
     padding: 18px;
     top: 20px;
     left: 20px;
-    animation: circleAnim 5s linear 2s infinite;
+    animation: circleAnim 5s linear 0s infinite;
 }
 
 
@@ -183,3 +183,4 @@
         left: -15px !important;
     }
 }
+
