@@ -8,7 +8,7 @@ export default function Footer() {
             <footer id="footerSection">
                 <div className="footerPartOne">
                     <div className="footerContext">
-                        <img src={assets.logo} alt="no img" />
+                        <img src={assets.ecomLogo} alt="no img" />
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis itaque laudantium quod, commodi esse labore nostrum ut, magni aliquam et blanditiis sunt consectetur iure voluptatibus assumenda quasi consequatur, quam tenetur excepturi ab atque doloremque dicta autem cumque.</p>
                     </div>
                     <div className="footerCol footerCol1">
@@ -46,4 +46,5 @@ export default function Footer() {
             </footer>
         </>
     )
+
 }
