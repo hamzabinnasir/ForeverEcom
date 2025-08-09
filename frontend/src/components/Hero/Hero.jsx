@@ -19,10 +19,11 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="heroRight">
-                    <img src="blob:https://web.whatsapp.com/f5792e0d-47b7-4d86-955c-213cb6a5101f" alt="no img" />
+                    <img src="blob:https://web.whatsapp.com/6d863d28-edba-4f11-8522-cc3cd68800b0" alt="no img" />
                 </div>
             </div>
         </>
     )
 
 }
+
