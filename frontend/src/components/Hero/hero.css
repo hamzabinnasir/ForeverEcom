@@ -177,10 +177,11 @@
 
 
 @media (max-width: 480px) {
-    .circle {
+    .circleH {
         display: none;
     }
 }
+
 
 
 
