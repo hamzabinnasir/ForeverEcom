@@ -56,6 +56,7 @@ import p_img52 from './p_img52.png'
 
 
 import logo from './logo.png'
+import ecomLogo from "./ecomLogo.png"
 import hero_img from './hero_img.png'
 import cart_icon from './cart_icon.png'
 import bin_icon from './bin_icon.png'
@@ -82,6 +83,7 @@ import jarvis_icon from "./jarvis_icon.png"
 
 export const assets = {
     logo,
+    ecomLogo,
     hero_img,
     cart_icon,
     dropdown_icon,
@@ -738,5 +740,6 @@ export const products = [
         date: 1716668445448,
         bestseller: false
     }
+
 
 ]
