@@ -56,6 +56,7 @@ import p_img52 from './p_img52.png'
 
 
 import logo from './logo.png'
+import ecomLogo from "./ecomLogo.png"
 import hero_img from './hero_img.png'
 import cart_icon from './cart_icon.png'
 import bin_icon from './bin_icon.png'
@@ -85,6 +86,7 @@ import heroImg6 from "./heroImg6.jpg"
 
 export const assets = {
     logo,
+    ecomLogo,
     hero_img,
     heroImg2,
     heroImg3,
@@ -739,3 +741,4 @@ export const products = [
     },
 
 ]
+
