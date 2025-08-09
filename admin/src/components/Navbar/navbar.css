@@ -1,279 +1,213 @@
-/* adminNavbar */
-#adminNavbar {
+/* navbar */
+#navbar {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
+    padding: 0px 130px;
     height: 80px;
-    padding: 0px 50px;
-    border-bottom: 1px solid #dadada;
-    flex-wrap: wrap;
-    gap: 12px;
 }
 
-/* adminNavLogo */
-#adminNavLogo {
-    width: 140px;
-}
-
-/* navText */
-.navText {
-    font-size: 14px;
-    color: #C586A5;
-    margin-top: -10px;
-    text-transform: uppercase;
-}
-
-/* logoutBtn */
-#logoutBtn {
-    padding: 9px 24px;
-    color: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: #4D555E;
-    border-radius: 20px;
-    font-size: 14px;
-}
-
-/* adminNavButtons */
-.adminNavButtons {
+.navListContainer {
     display: flex;
     align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.navListContainer li {
+    list-style: none;
+    color: #000;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* logo */
+#logo {
+    width: 130px;
+    cursor: pointer;
+}
+
+.navListContainer .link hr {
+    width: 60%;
+    display: none;
+}
+
+.navListContainer .link {
+    position: relative;
+}
+
+.navListContainer .active::before {
+    background-color: #000;
+    height: 2px;
+    border-radius: 5px;
+    width: 50%;
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+/* navIcons */
+.navIcons {
+    display: flex;
+    align-items: center;
+}
+
+.navIcons img {
+    width: 20px;
+}
+
+.profileNavList {
+    height: 100%;
+    padding: 20px 12px;
+    cursor: pointer;
+}
+
+/* profileNav */
+.profileNav {
+    position: relative;
+}
+
+.profileBoxNavs {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 14px;
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    right: -20px;
+    top: 60px;
+    width: 160px;
+    display: none;
+    border: 0.5px solid #999;
+    border-radius: 8px;
+    z-index: 200;
+}
+
+.homeList{
+    border-bottom: 0.5px solid #999;
+    margin-bottom: 4px;
+}
+
+.profileBoxNavs li {
+    width: 100%;
+    font-size: 15px;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: #777;
+    padding: 8px 6px;
+    border-radius: 4px;
+}
+
+.helloLink:hover {
+    color: #000;
+    background-color: #dadada;
+}
+
+.profileNav:hover .profileBoxNavs {
+    display: block;
+    display: flex;
+}
+
+/* counterDiv */
+.counterDiv {
+    position: relative;
+}
+
+/* navCounter */
+.navCounter {
+    background-color: #000;
+    color: #fff;
+    height: 14px;
+    width: 14px;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 8px;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+/* #navbatRes Section */
+.resNavParent{
+    display: none;
+}
+
+#navbarRes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 130px;
+}
+
+/* resNavImg */
+#resNavImg {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* navOverlay */
+.navOverlay {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 99;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    transform: translateX(100%);
+}
+
+.navOverlay ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.navOverlay ul li {
+    padding: 12px 22px;
+}
+
+.navOverlay .active {
+    background-color: #000;
+    color: #fff;
+}
+
+/* moveToLeft */
+.moveToLeft {
+    transform: translateX(0%);
+    top: 0px;
+    right: 0px;
+}
+
+/* backOverlay */
+.backOverlay {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.backOverlay img{
+    transform: rotate(180deg);
+    width: 12px;
 }
 
 /* Responsive Navbar */
-@media screen and (max-width: 768px) {
-    #adminNavbar {
-        padding: 10px 22px;
-        height: auto;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-    }
-
-    .adminNavButtons {
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-    }
-
-    #logoutBtn, .jarvisToggleBtn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    #adminNavLogo {
-        width: 100px;
-    }
-}
-
 @media screen and (max-width: 480px) {
-    .jarvisToggleBtn {
-        font-size: 12px;
-        padding: 10px 16px;
-    }
-
-    #logoutBtn {
-        padding: 8px 18px;
-    }
-
-    #adminNavbar {
-        padding: 10px 14px;
-    }
-
-    .navText {
-        font-size: 12px;
-    }
-}
-
-/* Jarvis Button Effects (same as before) */
-.jarvisToggleBtn {
-    position: relative;
-    padding: 12px 24px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #0ff;
-    background: transparent;
-    border: 2px solid #0ff;
-    border-radius: 50px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    z-index: 1;
-    text-transform: uppercase;
-    box-shadow: 0 0 15px #0ff inset, 0 0 30px #0ff;
-}
-
-.jarvisToggleBtn:hover {
-    background-color: rgba(0, 255, 255, 0.1);
-    transform: scale(1.03);
-}
-
-.jarvisToggleBtn.active {
-    color: #000;
-    background: #0ff;
-    box-shadow: 0 0 25px #0ff, 0 0 60px #0ff;
-    border: none !important;
-}
-
-.jarvisToggleBtn .pulse {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 255, 255, 0.6), transparent);
-    transform: translateX(-50%);
-    opacity: 0;
-    animation: none;
-    pointer-events: none;
-}
-
-.jarvisToggleBtn.active .pulse {
-    animation: verticalSignal 1.2s ease-out infinite;
-}
-
-.jarvisToggleBtn.active::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    background: #00f7ff;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-    animation: glowDrop 1.2s ease-out infinite;
-}
-
-.jarvisToggleBtn.boom {
-    animation: boomScale 0.3s ease-out;
-}
-
-@keyframes verticalSignal {
-    0% { top: 0%; opacity: 0.8; height: 20%; }
-    50% { top: 40%; opacity: 0.5; height: 30%; }
-    100% { top: 100%; opacity: 0; height: 0%; }
-}
-
-@keyframes glowDrop {
-    0% { top: 0%; opacity: 1; }
-    100% { top: 100%; opacity: 0; }
-}
-
-@keyframes boomScale {
-    0% { transform: scale(1); box-shadow: 0 0 0px rgba(0, 255, 255, 0.5); }
-    50% { transform: scale(1.3); box-shadow: 0 0 20px rgba(0, 255, 255, 1); }
-    100% { transform: scale(1); box-shadow: 0 0 5px rgba(0, 255, 255, 0.5); }
-}
-
-.jarvisToggleBtn .sparks {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    opacity: 0;
-    z-index: 0;
-}
-
-.jarvisToggleBtn .sparks::before,
-.jarvisToggleBtn .sparks::after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(to bottom, #0ff, transparent);
-    animation: none;
-    opacity: 0;
-}
-
-.jarvisToggleBtn.active .sparks::before {
-    left: 20%;
-    animation: sparkFlash 1.3s infinite;
-    opacity: 0.7;
-}
-
-.jarvisToggleBtn.active .sparks::after {
-    right: 20%;
-    animation: sparkFlash 1.5s infinite;
-    opacity: 0.7;
-}
-
-.jarvisToggleBtn.boom .sparks::before,
-.jarvisToggleBtn.boom .sparks::after {
-    animation: boomSparkFlash 0.3s ease-out;
-    opacity: 1;
-}
-
-@keyframes sparkFlash {
-    0% { height: 0%; opacity: 0; }
-    10% { height: 40%; opacity: 0.7; }
-    50% { height: 80%; opacity: 0.4; }
-    100% { height: 0%; opacity: 0; }
-}
-
-@keyframes boomSparkFlash {
-    0% { height: 0%; opacity: 0; }
-    20% { height: 70%; opacity: 1; }
-    50% { height: 100%; opacity: 0.6; }
-    100% { height: 0%; opacity: 0; }
-}
-
-
-/* New: Toggle Button Icon */
-.menuToggleBtn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #0ff;
-    margin-left: auto;
-}
-
-/* __________________________________________________ */
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    #adminNavbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 12px 22px;
-        gap: 10px;
-    }
-
-    .menuToggleBtn {
-        display: inline;
-    }
-
-    .adminNavButtons {
-        flex-direction: column;
-        width: 100%;
+    #navbar {
         display: none;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.4s ease;
     }
 
-    .adminNavButtons.showMenu {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
+    .resNavParent{
+        display: block;
     }
-
-    #logoutBtn,
-    .jarvisToggleBtn {
-        width: 100%;
-        justify-content: center;
+    #navbarRes{
+        padding: 0px 22px;
     }
-
-    #adminNavLogo {
-        width: 100px;
+    .navOverlay{
+        height: 100%;
     }
 }
