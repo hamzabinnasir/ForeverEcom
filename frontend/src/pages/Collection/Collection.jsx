@@ -82,7 +82,7 @@ export default function Collection() {
                             <form className="filterBox">
                                 <h4>Categories</h4>
                                 <div className="inputField">
-                                    <input type="checkbox" value={"man"} onChange={toggleCategory} />
+                                    <input type="checkbox" value={"Man"} onChange={toggleCategory} />
                                     <p>Men</p>
                                 </div>
                                 <div className="inputField">
@@ -135,6 +135,7 @@ export default function Collection() {
         </>
     )
 }
+
 
 
 
